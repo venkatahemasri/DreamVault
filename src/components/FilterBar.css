@@ -1,0 +1,132 @@
+.filter-bar-container {
+  padding: 16px 20px;
+  margin-bottom: 28px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.filter-search-box {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background: rgba(6, 24, 38, 0.7);
+  border: 1px solid rgba(25, 245, 209, 0.15);
+  border-radius: var(--radius-md);
+  padding: 10px 16px;
+  transition: border-color var(--transition-fast), box-shadow var(--transition-fast);
+}
+
+.filter-search-box:focus-within {
+  border-color: var(--electric-teal);
+  box-shadow: 0 0 12px rgba(0, 217, 192, 0.2);
+}
+
+.search-icon {
+  color: var(--secondary-text);
+  flex-shrink: 0;
+}
+
+.search-input {
+  flex: 1;
+  background: transparent;
+  border: none;
+  outline: none;
+  color: var(--primary-text);
+  font-size: 0.92rem;
+}
+
+.search-input::placeholder {
+  color: var(--muted-text);
+}
+
+.clear-search-btn {
+  color: var(--secondary-text);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 4px;
+}
+
+.clear-search-btn:hover {
+  color: var(--primary-text);
+}
+
+.filter-selectors-row {
+  display: flex;
+  align-items: flex-end;
+  gap: 14px;
+  flex-wrap: wrap;
+}
+
+.filter-select-group {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  min-width: 140px;
+  flex: 1;
+}
+
+.select-label {
+  font-size: 0.72rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--muted-text);
+}
+
+.filter-select {
+  background: rgba(6, 24, 38, 0.85);
+  border: 1px solid rgba(25, 245, 209, 0.14);
+  border-radius: var(--radius-sm);
+  color: var(--primary-text);
+  padding: 9px 12px;
+  font-size: 0.85rem;
+  outline: none;
+  cursor: pointer;
+  transition: border-color var(--transition-fast);
+  width: 100%;
+}
+
+.filter-select:focus {
+  border-color: var(--electric-teal);
+}
+
+.filter-select option {
+  background: #0B2638;
+  color: var(--primary-text);
+}
+
+.sort-select-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.sort-icon {
+  position: absolute;
+  left: 10px;
+  color: var(--secondary-text);
+  pointer-events: none;
+}
+
+.sort-select {
+  padding-left: 32px;
+}
+
+.reset-filter-btn {
+  align-self: flex-end;
+  margin-bottom: 2px;
+}
+
+@media (max-width: 768px) {
+  .filter-select-group {
+    min-width: calc(50% - 8px);
+  }
+}
+
+@media (max-width: 480px) {
+  .filter-select-group {
+    min-width: 100%;
+  }
+}

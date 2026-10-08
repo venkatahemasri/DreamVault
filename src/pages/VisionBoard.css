@@ -1,0 +1,114 @@
+.vision-board-page {
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+}
+
+.vision-board-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.vision-title-badge-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.vision-main-title {
+  font-family: var(--font-display);
+  font-size: 2rem;
+  font-weight: 800;
+  color: var(--primary-text);
+}
+
+.vision-main-subtitle {
+  color: var(--secondary-text);
+  font-size: 0.95rem;
+  margin-top: 4px;
+}
+
+.vision-quote-banner {
+  padding: 24px 30px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  background: linear-gradient(135deg, rgba(11, 38, 56, 0.7) 0%, rgba(6, 24, 38, 0.85) 100%);
+  border: 1px solid rgba(25, 245, 209, 0.15);
+  border-left: 4px solid var(--bright-aqua);
+}
+
+.quote-icon-decor {
+  color: var(--electric-teal);
+  flex-shrink: 0;
+  opacity: 0.8;
+}
+
+.banner-quote-content {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.banner-quote-text {
+  font-family: var(--font-main);
+  font-size: 1.05rem;
+  font-style: italic;
+  color: var(--primary-text);
+  line-height: 1.5;
+}
+
+.banner-quote-author {
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--bright-aqua);
+}
+
+.vision-category-pills {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  overflow-x: auto;
+  padding-bottom: 6px;
+}
+
+.cat-pill {
+  padding: 8px 16px;
+  border-radius: var(--radius-full);
+  background: rgba(11, 38, 56, 0.7);
+  border: 1px solid rgba(25, 245, 209, 0.12);
+  color: var(--secondary-text);
+  font-size: 0.84rem;
+  font-weight: 600;
+  white-space: nowrap;
+  transition: all var(--transition-fast);
+}
+
+.cat-pill:hover {
+  background: rgba(14, 47, 70, 0.85);
+  color: var(--primary-text);
+  border-color: rgba(25, 245, 209, 0.3);
+}
+
+.cat-pill.active {
+  background: var(--electric-teal);
+  color: #061826;
+  border-color: var(--electric-teal);
+  box-shadow: 0 4px 14px rgba(0, 217, 192, 0.3);
+}
+
+/* Responsive Masonry / Mosaic Grid */
+.vision-masonry-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+  gap: 26px;
+}
+
+@media (max-width: 768px) {
+  .vision-masonry-grid {
+    grid-template-columns: 1fr;
+  }
+}

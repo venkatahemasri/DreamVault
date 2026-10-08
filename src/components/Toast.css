@@ -1,0 +1,106 @@
+.toast-portal {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  z-index: 120;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  pointer-events: none;
+  max-width: 380px;
+  width: calc(100% - 48px);
+}
+
+.toast-card {
+  pointer-events: auto;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 14px 18px;
+  border-radius: var(--radius-md);
+  background: rgba(11, 38, 56, 0.95);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6);
+  animation: slideInUp 0.3s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+@keyframes slideInUp {
+  from {
+    opacity: 0;
+    transform: translateY(16px) scale(0.96);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+.toast-message {
+  flex: 1;
+  font-size: 0.88rem;
+  font-weight: 500;
+  color: var(--primary-text);
+  line-height: 1.4;
+}
+
+.toast-close {
+  color: var(--secondary-text);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 4px;
+  border-radius: 4px;
+  transition: all var(--transition-fast);
+}
+
+.toast-close:hover {
+  color: var(--primary-text);
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.toast-success {
+  border-left: 4px solid var(--electric-teal);
+  box-shadow: 0 8px 24px rgba(0, 217, 192, 0.2);
+}
+
+.toast-success .toast-icon {
+  color: var(--bright-aqua);
+}
+
+.toast-gold {
+  border-left: 4px solid var(--warm-gold);
+  box-shadow: 0 8px 24px rgba(255, 200, 87, 0.25);
+}
+
+.toast-gold .toast-icon {
+  color: var(--warm-gold);
+}
+
+.toast-error {
+  border-left: 4px solid var(--error-color);
+  box-shadow: 0 8px 24px rgba(255, 107, 107, 0.25);
+}
+
+.toast-error .toast-icon {
+  color: var(--error-color);
+}
+
+.toast-info {
+  border-left: 4px solid var(--bright-aqua);
+}
+
+.toast-info .toast-icon {
+  color: var(--bright-aqua);
+}
+
+@media (max-width: 900px) {
+  .toast-portal {
+    bottom: calc(var(--mobile-nav-height) + 16px);
+    right: 16px;
+    left: 16px;
+    max-width: none;
+    width: auto;
+  }
+}

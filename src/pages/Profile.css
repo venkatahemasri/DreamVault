@@ -1,0 +1,251 @@
+.profile-page {
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+}
+
+.profile-banner {
+  padding: 32px 36px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  background: linear-gradient(135deg, rgba(11, 38, 56, 0.85) 0%, rgba(6, 24, 38, 0.95) 100%);
+  border: 1px solid rgba(25, 245, 209, 0.18);
+}
+
+.profile-banner-left {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+.profile-avatar-large {
+  width: 84px;
+  height: 84px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--ocean-surface) 0%, var(--electric-teal) 100%);
+  border: 2px solid var(--bright-aqua);
+  box-shadow: 0 0 24px var(--teal-glow);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  flex-shrink: 0;
+}
+
+.avatar-initials {
+  font-family: var(--font-display);
+  font-size: 1.8rem;
+  font-weight: 800;
+  color: #061826;
+}
+
+.avatar-status-pip {
+  position: absolute;
+  bottom: 2px;
+  right: 4px;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: var(--bright-aqua);
+  border: 2px solid #061826;
+}
+
+.profile-text-block {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.profile-name {
+  font-family: var(--font-display);
+  font-size: 1.8rem;
+  font-weight: 800;
+  color: var(--primary-text);
+}
+
+.profile-role {
+  font-size: 0.92rem;
+  color: var(--bright-aqua);
+  font-weight: 600;
+}
+
+.profile-bio-snippet {
+  font-size: 0.85rem;
+  color: var(--secondary-text);
+  max-width: 520px;
+  line-height: 1.4;
+  margin-top: 4px;
+}
+
+.profile-banner-stats {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.mini-stat-card {
+  background: rgba(6, 24, 38, 0.7);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: var(--radius-md);
+  padding: 12px 18px;
+  text-align: center;
+  min-width: 90px;
+}
+
+.mini-num {
+  font-family: var(--font-display);
+  font-size: 1.6rem;
+  font-weight: 800;
+  display: block;
+  line-height: 1.1;
+}
+
+.mini-lbl {
+  font-size: 0.7rem;
+  color: var(--secondary-text);
+  text-transform: uppercase;
+}
+
+.profile-sections-grid {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 28px;
+  align-items: flex-start;
+}
+
+.settings-col {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.profile-card {
+  padding: 28px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.card-section-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.section-title {
+  font-family: var(--font-display);
+  font-size: 0.85rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  color: var(--secondary-text);
+}
+
+.profile-form {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.settings-list {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.setting-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 18px;
+  padding-bottom: 14px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.04);
+}
+
+.setting-info {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.setting-name {
+  font-size: 0.92rem;
+  font-weight: 600;
+  color: var(--primary-text);
+}
+
+.setting-desc {
+  font-size: 0.78rem;
+  color: var(--muted-text);
+  line-height: 1.4;
+}
+
+/* Toggle Switch */
+.toggle-switch {
+  width: 48px;
+  height: 26px;
+  background: rgba(6, 24, 38, 0.8);
+  border: 1px solid rgba(25, 245, 209, 0.3);
+  border-radius: var(--radius-full);
+  position: relative;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+  flex-shrink: 0;
+}
+
+.toggle-switch.active {
+  background: var(--electric-teal);
+  border-color: var(--bright-aqua);
+}
+
+.toggle-thumb {
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: #ffffff;
+  position: absolute;
+  top: 3px;
+  left: 3px;
+  transition: transform var(--transition-fast);
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.4);
+}
+
+.toggle-switch.active .toggle-thumb {
+  transform: translateX(22px);
+  background: #061826;
+}
+
+.danger-card {
+  border-color: rgba(255, 200, 87, 0.25);
+  background: rgba(11, 38, 56, 0.5);
+}
+
+.danger-info-text {
+  font-size: 0.85rem;
+  color: var(--secondary-text);
+  line-height: 1.5;
+}
+
+.danger-actions-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+@media (max-width: 900px) {
+  .profile-banner {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .profile-banner-left {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .profile-sections-grid {
+    grid-template-columns: 1fr;
+  }
+}

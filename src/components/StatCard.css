@@ -1,0 +1,87 @@
+.stat-card {
+  padding: 22px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  overflow: hidden;
+}
+
+.stat-card.clickable {
+  cursor: pointer;
+}
+
+.stat-card.clickable:hover {
+  transform: translateY(-2px);
+}
+
+.stat-card-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 12px;
+}
+
+.stat-card-label {
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--secondary-text);
+}
+
+.stat-card-icon-wrap {
+  width: 40px;
+  height: 40px;
+  border-radius: var(--radius-md);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.variant-teal .stat-card-icon-wrap {
+  background: rgba(0, 217, 192, 0.12);
+  color: var(--bright-aqua);
+  border: 1px solid rgba(0, 217, 192, 0.25);
+}
+
+.variant-gold .stat-card-icon-wrap {
+  background: rgba(255, 200, 87, 0.12);
+  color: var(--warm-gold);
+  border: 1px solid rgba(255, 200, 87, 0.3);
+}
+
+.variant-ocean .stat-card-icon-wrap {
+  background: rgba(25, 245, 209, 0.08);
+  color: var(--bright-aqua);
+  border: 1px solid rgba(25, 245, 209, 0.15);
+}
+
+.stat-card-middle {
+  margin-bottom: 8px;
+}
+
+.stat-card-value {
+  font-family: var(--font-display);
+  font-size: 2.3rem;
+  font-weight: 800;
+  color: var(--primary-text);
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+}
+
+.variant-gold .stat-card-value {
+  color: var(--warm-gold);
+}
+
+.variant-teal .stat-card-value {
+  color: var(--bright-aqua);
+}
+
+.stat-card-bottom {
+  margin-top: auto;
+}
+
+.stat-card-subtext {
+  font-size: 0.78rem;
+  color: var(--muted-text);
+}

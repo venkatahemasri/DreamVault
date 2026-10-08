@@ -1,0 +1,62 @@
+.mobile-nav {
+  display: none;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: var(--mobile-nav-height);
+  background: rgba(6, 24, 38, 0.95);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+  border-top: 1px solid var(--ocean-card-border);
+  z-index: 50;
+  padding: 0 16px;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.mob-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 3px;
+  color: var(--secondary-text);
+  font-size: 0.68rem;
+  font-weight: 500;
+  text-decoration: none;
+  transition: color var(--transition-fast);
+  padding: 6px 10px;
+}
+
+.mob-item.active {
+  color: var(--bright-aqua);
+}
+
+.mob-add-btn {
+  position: relative;
+  top: -12px;
+}
+
+.mob-add-circle {
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--electric-teal) 0%, var(--bright-aqua) 100%);
+  color: #061826;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 16px var(--teal-glow);
+  transition: transform var(--transition-fast);
+}
+
+.mob-add-btn:active .mob-add-circle {
+  transform: scale(0.92);
+}
+
+@media (max-width: 900px) {
+  .mobile-nav {
+    display: flex;
+  }
+}
